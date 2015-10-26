@@ -1,5 +1,5 @@
 {
-    "name": "vaseninmm/yii2-yashop-ses",
+    "name": "vaseninm/yii2-ses",
     "description": "Extension for sending emails via amazon ses",
     "type": "yii2-extension",
     "keywords": ["yii2","extension","ses","aws"],
