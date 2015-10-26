@@ -1,9 +1,8 @@
 <?php
 
-namespace yashop\ses;
+namespace vaseninm\ses;
 
 use yii\mail\BaseMessage;
-use yashop\ses\libs\SimpleEmailServiceMessage;
 
 /**
  * Message implements a message class based on Amazon Simple Email Service
@@ -13,7 +12,7 @@ use yashop\ses\libs\SimpleEmailServiceMessage;
 class Message extends BaseMessage
 {
     /**
-     * @var \yashop\ses\libs\SimpleEmailServiceMessage Simple Email Service message instance.
+     * @var \SimpleEmailServiceMessage Simple Email Service message instance.
      */
     private $_sesMessage;
 
@@ -69,7 +68,7 @@ class Message extends BaseMessage
 
     /**
      * In Yii2 dev panel some bug and this method have to return information about result of sending
-     * @return \yashop\ses\Message Message class instance.
+     * @return \vaseninm\ses\Message Message class instance.
      */
     public function getSwiftMessage()
     {
@@ -77,12 +76,12 @@ class Message extends BaseMessage
     }
 
     /**
-     * @return \yashop\ses\libs\SimpleEmailServiceMessage Simple Email Service message instance.
+     * @return \SimpleEmailServiceMessage Simple Email Service message instance.
      */
     public function getSesMessage()
     {
         if (!is_object($this->_sesMessage)) {
-            $this->_sesMessage = new SimpleEmailServiceMessage();
+            $this->_sesMessage = new \SimpleEmailServiceMessage();
         }
 
         return $this->_sesMessage;
